@@ -43,10 +43,15 @@ const columns = [
                 return alert(JSON.stringify(currentRow, null, 4));
             };
 
+            const onDelete = (e) => {
+                const currentRow = params.row;
+                return alert(`Delete ID => ${currentRow.id}`);
+            };
+
             return (
                 <Stack direction="row" spacing={2}>
                     <Button variant="outlined" color="warning" size="small" onClick={onClick}>Edit</Button>
-                    <Button variant="outlined" color="error" size="small" onClick={onClick}>Delete</Button>
+                    <Button variant="outlined" color="error" size="small" onClick={onDelete}>Delete</Button>
                 </Stack>
             );
         }
@@ -58,8 +63,8 @@ const rows = [
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
     { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: 24 },
+    { id: 6, lastName: 'Melisandre', firstName: "Chacha", age: 150 },
     { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
